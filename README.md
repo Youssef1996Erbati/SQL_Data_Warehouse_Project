@@ -1,30 +1,27 @@
 
-# Data Warehouse and Analytics Project
+# Projet Data Warehouse et Analytics
 
-Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
-
+Bienvenue dans le dépôt du **Projet Data Warehouse et Analytics !** 🚀  
+Ce projet présente une solution complète de data warehousing et d’analyse, depuis la construction d’un entrepôt de données jusqu’à la génération d’insights exploitables. Conçu comme un projet de portfolio, il met en avant les meilleures pratiques du secteur en data engineering et en analytique.
 ---
 ## 🏗️ Data Architecture
 
-The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
-![Data Architecture](docs/data_architecture.png)
+L’architecture des données de ce projet suit l’architecture en médaillon avec les couches **Bronze**, **Silver** et **Gold** :
 
-1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
-
+1. **Couche Bronze**: Stocke les données brutes telles quelles depuis les systèmes sources. Les données sont ingérées à partir de fichiers CSV vers une base SQL Server.
+2. **Couche Silver**: Cette couche inclut les processus de nettoyage, de standardisation et de normalisation des données afin de les préparer pour l’analyse.
+3. **Couche Gold**: Contient des données prêtes pour le métier, modélisées en schéma en étoile, adaptées au reporting et à l’analyse.
 ---
-## 📖 Project Overview
+## 📖 Vue d’ensemble du projet
 
 Ce projet comprend :
 
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+1. **Data Architecture**: Conception d’un data warehouse moderne basé sur l’architecture en médaillon (**Bronze**, **Silver**, **Gold**).
+2. **ETL Pipelines**: Extraction, transformation et chargement des données depuis les systèmes sources vers l’entrepôt.
+3. **Data Modeling**: Création de tables de faits et de dimensions optimisées pour les requêtes analytiques.
+4. **Analytics & Reporting**: Création de rapports et tableaux de bord basés sur SQL pour produire des insights exploitables.
 
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
+🎯 Ce dépôt est une excellente ressource pour les professionnels et étudiants souhaitant démontrer leurs compétences en :
 - SQL Development
 - Data Architect
 - Data Engineering  
@@ -42,62 +39,59 @@ Ce projet comprend :
 Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
 
 #### Specifications
-- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+- **Data Sources**: Importer les données de deux systèmes sources (ERP et CRM) fournis sous forme de fichiers CSV.
+- **Data Quality**: Nettoyer et corriger les problèmes de qualité avant analyse.
+- **Integration**: Fusionner les deux sources dans un modèle de données unique et facile à exploiter pour l’analyse.
+- **Scope**: Se concentrer uniquement sur les données récentes (pas d’historisation requise).
+- **Documentation**: Fournir une documentation claire du modèle de données pour les équipes métiers et analytiques.
 
 ---
 
 ### BI: Analytics & Reporting (Data Analysis)
 
 #### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
+Développer des analyses basées sur SQL pour fournir des insights détaillés sur :
+- **Le comportement client**
+- **La performance des produits**
+- **Les tendances de vente**
 
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
+Ces analyses permettent aux parties prenantes d’accéder à des indicateurs clés et de prendre des décisions stratégiques.
 
-For more details, refer to [docs/requirements.md](docs/requirements.md).
 
-## 📂 Repository Structure
+## 📂 Structure du dépôt
 ```
-data-warehouse-project/
+SQL_Data_Warehouse_Project/
 │
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+├── datasets/                           # Données brutes utilisées pour le projet (ERP et CRM)
 │
-├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+├── docs/                               # Documentation du projet et détails d’architecture
+│   ├── etl.drawio                      # Schéma des techniques et méthodes ETL
+│   ├── data_architecture.drawio        # Schéma de l’architecture du projet
+│   ├── data_catalog.md                 # Catalogue des données (description des champs et métadonnées)
+│   ├── data_flow.drawio                # Diagramme des flux de données
+│   ├── data_models.drawio              # Modèles de données (schéma en étoile)
+│   ├── naming-conventions.md           # Règles de nommage (tables, colonnes, fichiers)
 │
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
+├── scripts/                            # Scripts SQL pour ETL et transformations
+│   ├── bronze/                         # Scripts pour extraction et chargement des données brutes
+│   ├── silver/                         # Scripts pour nettoyage et transformation des données
+│   ├── gold/                           # Scripts pour création des modèles analytiques
 │
-├── tests/                              # Test scripts and quality files
-│
-├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
-├── .gitignore                          # Files and directories to be ignored by Git
-└── requirements.txt                    # Dependencies and requirements for the project
+├── README.md                           # Présentation et instructions du projet
+├── LICENSE                             # Licence du projet
+├── .gitignore                          # Fichiers ignorés par Git
+└── requirements.txt                    # Dépendances du projet
 ```
 ---
 
 
 ## 🛡️ License
 
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+Ce projet est sous [MIT License](LICENSE). Vous êtes libre de l’utiliser, le modifier et le partager à condition de mentionner l’auteur.
 
-## 🌟 About Me
+## 🌟 À propos de moi
 
-Hi there! I'm **Youssef ER-BATI**. I’m a Logistics Engineer and Data passionate on a mission to share knowledge and make working with data enjoyable and engaging!
+Bonjour ! Je suis **Youssef ER-BATI**. Je suis ingénieur logistique et passionné de data, avec pour mission de partager mes connaissances et de rendre le travail avec les données plus accessible et engageant !
 
-Let's stay in touch! Feel free to connect with me on the following platforms:
+Restons en contact ! N’hésitez pas à me rejoindre sur LinkedIn :
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/youssef-er-bati/)
